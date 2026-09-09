@@ -1,13 +1,11 @@
 # import ini jangan dihapus/diedit yak
 import random
 
-
 def totalPenjualan(data, n):
     if n != 0:
         return data[n - 1][1] + totalPenjualan(data, n - 1)
     else:
         return 0
-
 
 def penjualanTertinggi(data, n):
     if n != 1:
@@ -17,7 +15,6 @@ def penjualanTertinggi(data, n):
             return penjualanTertinggi(data[1:], n - 1)
     else:
         return data[0]
-
 
 def diAtasRataRata(penjualan, rataRata):
     temp = 0
