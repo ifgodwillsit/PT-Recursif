@@ -53,7 +53,8 @@ n = len(data)
 print("\n===== Data Penjualan =====")
 for namaBarang, jumlah in penjualan.items():
     print(namaBarang, ":", jumlah)
-
+ 
+ 
 total = totalPenjualan(data, n)
 tertinggi = penjualanTertinggi(data, n)
 rataRata = total / n
