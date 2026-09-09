@@ -2,17 +2,32 @@
 import random
 
 
-def totalPenjualan(?, ?):
-    # kerjakan di sini
+def totalPenjualan(data, n):
+    if n != 0:
+        return data[n - 1][1] + totalPenjualan(data, n - 1)
+    else:
+        return 0
 
 
-def penjualanTertinggi(?, ?):
-    # kerjakan di sini
+def penjualanTertinggi(data, n):
+    if n != 1:
+        if data[0][1] > penjualanTertinggi(data[1:], n - 1)[1]:
+            return data[0]
+        else:
+            return penjualanTertinggi(data[1:], n - 1)
+    else:
+        return data[0]
 
 
-def diAtasRataRata(?, ?):
-    # kerjakan di sini
-
+def diAtasRataRata(penjualan, rataRata):
+    temp = 0
+    for i in penjualan.values():
+        if i > rataRata:
+            temp += 1
+        else:
+            temp = temp
+    return temp
+        
 
 # Program Utama - Jangan dihapus/diedit yak
 angka = int(input("NIM: "))
